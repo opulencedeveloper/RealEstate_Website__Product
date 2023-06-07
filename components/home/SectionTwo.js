@@ -30,20 +30,20 @@ const availableProperties = [
 const SectionTwo = () => {
   return (
     <div className="mx-5 md:mx-14">
-      <div className=" mt-14 p-10 space-y-12 bg-secondary text-white ">
-        <h4 className="text-center font-semibold text-4xl">What we offer</h4>
-        <div className="flex space-x-48">
+      <div className=" mt-14 px-5 py-12 space-y-14 bg-secondary text-white md:px-12">
+        <h4 className="text-center font-semibold text-xl md:text-4xl">What we offer</h4>
+        <div className="flex flex-col space-y-10 justify-between xl:flex-row xl:space-y-0">
           {sectionContents.map((content, index) => (
-            <p key={index} className="text-2xl font-light">
+            <p key={index} className="font-light w-full md:text-xl md:text-2xl xl:max-w-xs">
               {content}
             </p>
           ))}
         </div>
       </div>
-      <h5 className="text-4xl font-semibold mb-14 mt-24">Available Properties</h5>
-      <div className="flex px-3 space-x-40">
+      <h5 className="text-xl font-semibold mb-7 mt-28 md:mb-12 md:text-4xl">Available Properties</h5>
+      <div className="flex flex-wrap w-full">
         {availableProperties.map((content, index) => (
-          <div key={index} className="flex flex-col space-y-3 bg-white py-5 px-3">
+          <div key={index} className="w-full flex flex-col space-y-3 max-w-full mb-5 bg-white py-5 px-3 mr-0 md:max-w-sm md:mr-5">
             <Image
               src={`/images/${content.image}.svg`}
               alt={content.title}
@@ -55,7 +55,7 @@ const SectionTwo = () => {
             <p className="text-secondary2 font-light">
              {content.description}
             </p>
-            <button className="py-4 text-white font-semibold bg-primary rounded-md mx-1">
+            <button className="py-4 text-white font-semibold bg-primary rounded-md w-max px-5 md:w-full ">
               See available apartments
             </button>
           </div>

@@ -4,9 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-//import Portal from "../UI/Portal";
-// import MobileNavigation from "./MobileNavigation";
-// import handleWhatsAppClick from "@/helpers/whatsapp";
+import Portal from "../UI/Portal";
+import MobileNavigation from "./MobileNavigation";
+import handleWhatsAppClick from "@/helpers/whatsapp";
 
 const linkContent = [
   { title: "Solution", link: "/" },
@@ -34,34 +34,55 @@ const MainNavigation = () => {
       });
     }
   };
+
   return (
     <nav className="w-full flex items-center mt-2 justify-between px-5 md:px-14">
-      <Image
-        src="/images/logo/logo.svg"
-        className="h-logo w-logo"
-        width={72}
-        height={72}
-      />
-      <div className="space-x-32  w-max flex justify-between items-center">
-        <div className="flex space-x-20">
+      <Portal>
+        <div
+          className={`fixed inset-y-0 -left-64 z-50 w-64 shadow-lg transform ${
+            isOpen ? "translate-x-full" : "translate-x-0"
+          } transition-transform duration-300 ease-in-out`}
+        >
+          <MobileNavigation toggleDrawer={toggleDrawer} />
+        </div>
+      </Portal>
+      <div className="flex justify-between items-center w-max lg:w-9/12">
+        <Image
+          src="/images/logo/logo.svg"
+          className="h-logo w-logo"
+          alt="logo"
+          width={72}
+          height={72}
+        />
+        <div className=" hidden lg:flex space-x-20">
           {" "}
           {linkContent.map((content, index) => (
             <Link
               key={index}
               className="text-secondary2 text-xl"
+              onClick={handleWhatsAppClick}
               href={content.link}
             >
               {content.title}
             </Link>
           ))}{" "}
-        </div>
-        <Link
-          href={""}
-          className="bg-primaryshade rounded-md py-4 px-8 text-primary font-bold"
-        >
-          Book Consultation
-        </Link>
+        </div>{" "}
       </div>
+     <div className="flex items-center space-x-5"> <Link
+        href={""}
+        className="bg-primaryshade rounded-md py-4 px-8 text-primary font-bold"
+      >
+        Book Consultation
+      </Link>
+      <button
+        className={`${navAnimationClass} flex hamburger focus:outline-none lg:hidden`}
+        type="button"
+        onClick={toggleDrawer}
+      >
+        <span className="hamburger-top"></span>
+        <span className="hamburger-middle"></span>
+        <span className="hamburger-bottom"></span>
+      </button> </div>
     </nav>
   );
 };

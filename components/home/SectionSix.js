@@ -6,37 +6,37 @@ const sectionContents = [
     id: 0,
     title: "How do I get started",
     description:
-      "Lörem ipsum autorad geoblockering olig än pov. Umibelt dotorobelt. Beninas ultrack. ",
+      "Lörem ipsum autorad geoblockering olig än pov. Umibelt dotorobelt. Beninas ultrack. Lörem ipsum autorad geoblockering olig än pov. Umibelt dotorobelt. Beninas ultrack.",
   },
   {
     id: 2,
     title: "How do I get started",
     description:
-      "Lörem ipsum autorad geoblockering olig än pov. Umibelt dotorobelt. Beninas ultrack. ",
+      "Lörem ipsum autorad geoblockering olig än pov. Umibelt dotorobelt. Beninas ultrack. Lörem ipsum autorad geoblockering olig än pov. Umibelt dotorobelt. Beninas ultrack.",
   },
   {
     id: 3,
     title: "How do I get started",
     description:
-      "Lörem ipsum autorad geoblockering olig än pov. Umibelt dotorobelt. Beninas ultrack. ",
+      "Lörem ipsum autorad geoblockering olig än pov. Umibelt dotorobelt. Beninas ultrack. Lörem ipsum autorad geoblockering olig än pov. Umibelt dotorobelt. Beninas ultrack.",
   },
   {
     id: 4,
     title: "How do I get started",
     description:
-      "Lörem ipsum autorad geoblockering olig än pov. Umibelt dotorobelt. Beninas ultrack. ",
+      "Lörem ipsum autorad geoblockering olig än pov. Umibelt dotorobelt. Beninas ultrack. Lörem ipsum autorad geoblockering olig än pov. Umibelt dotorobelt. Beninas ultrack.",
   },
   {
     id: 5,
     title: "How do I get started",
     description:
-      "Lörem ipsum autorad geoblockering olig än pov. Umibelt dotorobelt. Beninas ultrack. ",
+      "Lörem ipsum autorad geoblockering olig än pov. Umibelt dotorobelt. Beninas ultrack. Lörem ipsum autorad geoblockering olig än pov. Umibelt dotorobelt. Beninas ultrack.",
   },
   {
     id: 6,
     title: "How do I get started",
     description:
-      "Lörem ipsum autorad geoblockering olig än pov. Umibelt dotorobelt. Beninas ultrack. ",
+      "Lörem ipsum autorad geoblockering olig än pov. Umibelt dotorobelt. Beninas ultrack. Lörem ipsum autorad geoblockering olig än pov. Umibelt dotorobelt. Beninas ultrack.",
   },
 ];
 const SectionSix = () => {
@@ -47,9 +47,9 @@ const SectionSix = () => {
   };
 
   return (
-    <div className="px-10 flex md:px-24 mt-14 mb-32 space-x-20">
-      <div className="space-y-7">
-        <p className="text-5xl ">Frequently Asked Questions</p>
+    <div className="px-5 flex flex-col mt-40 mb-32 space-x-0 md:px-44 xl:flex-row xl:space-x-20">
+      <div className="space-y-5">
+        <p className="text-3xl font-medium leading-normal md:text-5xl">Frequently Asked Questions</p>
         <button className="flex items-center space-x-2">
           <p className="text-primary font-semibold">See more</p>
           <Image
@@ -61,15 +61,15 @@ const SectionSix = () => {
         </button>
       </div>
 
-      <div className="w-1/2 h-max">
+      <div className="w-full h-max md:w-1/2">
         <div>
           {sectionContents.map((content, index) => (
             <div key={index}>
               <button
-                className="flex items-center justify-between w-full py-2 px-4 transition duration-300 ease-in-out"
+                className="flex items-center justify-between w-full py-2 transition duration-300 ease-in-out"
                 onClick={() => handleToggle(index)}
               >
-                <span>{content.title}</span>
+                <span className="text-xl font-medium">{content.title}</span>
                 <Image
                   className={`h-auto w-auto ml-1 transform ${
                     activeIndex === index ? "rotate-180" : ""
@@ -80,7 +80,7 @@ const SectionSix = () => {
                 />
               </button>
               {activeIndex === index && (
-                <div className="px-4 py-2 ">{content.description}</div>
+                <div className="px-7 py-2 text-secondary2">{content.description}</div>
               )}
             </div>
           ))}

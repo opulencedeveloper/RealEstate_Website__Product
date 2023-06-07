@@ -2,9 +2,9 @@ import Image from "next/image";
 
 const SectionFive = () => {
   return (
-    <div className="px-10 md:px-24 mt-14">
-      <div className="flex items-center space-x-5">
-        <div className="w-[50rem] h-[30rem] relative">
+    <div className="px-5 md:px-44 mt-14">
+      <div className="flex flex-col-reverse items-center space-x-0 lg:space-x-5 lg:flex-row">
+        <div className="w-full h-[30rem] relative lg:w-[50rem]">
           <Image
             width={140}
             height={140}
@@ -31,19 +31,19 @@ const SectionFive = () => {
             height={150}
             alt="image4"
             src="/images/image4.svg"
-            className="h-auto w-auto absolute bottom-0"
+            className="h-auto w-auto absolute bottom-0 left-8"
           />
           <Image
             width={112}
             height={112}
             alt="image4"
             src="/images/image5.svg"
-            className="h-auto w-auto absolute right-0 top-40"
+            className="h-auto w-auto absolute right-0 top-52 md:top-40"
           />
         </div>
-        <div className="space-y-5">
+        <div className="space-y-4 w-full">
           <h3 className="text-primary font-semibold text-lg">TESTIMONIALS</h3>
-          <p className="font-semibold text-4xl leading-normal">
+          <p className="font-semibold text-2xl leading-normal md:text-4xl">
             “I used this platform while house-hunting last year, and I must say
             it's really commendable.”
           </p>

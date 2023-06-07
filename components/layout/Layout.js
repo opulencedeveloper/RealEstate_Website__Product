@@ -6,7 +6,7 @@ const Layout = (props) => {
     <>
       <MainNavigation />
       <main>{props.children}</main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
