@@ -2,9 +2,9 @@ import Image from "next/image";
 
 const SectionFive = () => {
   return (
-    <div className="px-5 md:px-44 mt-14 ">
-      <div className=" border border-black flex flex-col-reverse items-center space-x-0 lg:space-x-5 lg:flex-row">
-        <div className="border border-black relative w-full h-[30rem] border border-black lg:w-[50rem]">
+    <div className="px-4 md:px-44 mt-14 ">
+      <div className="flex flex-col-reverse items-center space-x-0 lg:flex-row xl:space-x-5">
+        <div className="relative w-screen md:w-full h-[30rem] lg:w-[50rem]">
           <Image
             width={140}
             height={140}
