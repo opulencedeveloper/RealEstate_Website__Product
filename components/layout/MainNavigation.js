@@ -70,7 +70,7 @@ const MainNavigation = () => {
       </div>
      <div className="flex items-center space-x-5"> <Link
         href={""}
-        className="bg-primaryshade rounded-md py-4 px-8 text-primary font-bold"
+        className="bg-primaryshade rounded-md py-4 px-4 text-primary font-bold text-xs md:px-8 md:text-base"
       >
         Book Consultation
       </Link>
