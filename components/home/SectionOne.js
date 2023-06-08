@@ -38,7 +38,7 @@ const SectionOne = () => {
       />
 
         <div className="space-y-5">
-          <div className="font-semibold text-xl text-secondary pt-3">Benifits</div>
+          <div className="font-semibold text-xl text-secondary pt-3">Benefits</div>
           {sectionContents.map((content, index) => (
             <div key={index} className="flex space-x-3 items-center">
               <Image
